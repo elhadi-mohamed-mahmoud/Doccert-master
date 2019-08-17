@@ -1,0 +1,129 @@
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>register</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+<ion-content padding>
+  <br/>
+  <div class="register-box">
+    Register
+  </div>
+  <form (ngSubmit)="register()" #registerForm="ngForm">
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+
+            <ion-item>
+              <ion-input type="text" placeholder="Email" name="email" [(ngModel)]="registerCredentials.email" required><ion-icon name="at"></ion-icon></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="registerCredentials.password" required> <ion-icon name="key"></ion-icon>
+              </ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input type="password" placeholder="Confirm Password" name="confirmation_password" [(ngModel)]="registerCredentials.confirmation_password" required></ion-input>
+            </ion-item>
+            <br/>
+            <ion-item>
+            <button ion-button icon-only outline  (click)="getImage()"><ion-icon ios="ios-images" md="md-images"></ion-icon>Signature image</button>
+          </ion-item>
+          </ion-list>
+
+        </ion-col>
+        
+      </ion-row>
+      <ion-row>
+        <ion-col class="signup-col">
+          <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Register</button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <ion-header translucent>
+      <ion-toolbar>
+        <ion-title>Create Account</ion-title>
+      </ion-toolbar>
+</ion-header>
+  
+    <ion-content fullscreen>
+
+
+      <form (ngSubmit)="myRegister()">
+        <ion-list lines="full" class="ion-no-margin ion-no-padding">
+          <br><br>
+          <ion-item>
+            <ion-label position="stacked">National ID </ion-label>
+            <ion-input required type="number" name="id" (ngModel)="registerCredentials.id" required><ion-icon name="card"></ion-icon></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">First Name </ion-label>
+            <ion-input required type="text" name="fname" (ngModel)="registerCredentials.fname" required><ion-icon name="clipboard"></ion-icon></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Last Name </ion-label>
+            <ion-input required type="text" (ngModel)="registerCredentials.lname" required><ion-icon name="clipboard"></ion-icon></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Gender</ion-label>
+            <ion-select name="gender" (ngModel)="registerCredentials.gender" required>
+              <ion-option value="f">Female</ion-option>
+              <ion-option value="m">Male</ion-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Date of birth</ion-label>
+            <ion-input required type="Date" name="dateBirth"
+             (ngModel)="registerCredentials.dateBirth" required><ion-icon name="calendar"></ion-icon></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Address</ion-label>
+            <ion-input required type="text" name="address"  (ngModel)="registerCredentials.address" required><ion-icon name="clipboard"></ion-icon></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Address Email </ion-label>
+            <ion-input required type="text" name="email" (ngModel)="registerCredentials.email" required><ion-icon name="at"></ion-icon></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Position </ion-label>
+            <ion-input required type="text" name="position" 
+            (ngModel)="registerCredentials.position" required><ion-icon name="clipboard"></ion-icon></ion-input>
+          </ion-item>
+
+        
+          <button ion-button expand="block" type="submit" class="ion-no-margin" 
+        >Create account</button>
+      
+        </ion-list>
+      </form>
+    </ion-content>
+ -->

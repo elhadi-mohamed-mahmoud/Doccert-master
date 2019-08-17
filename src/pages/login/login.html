@@ -1,0 +1,57 @@
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+ -->
+
+<ion-content class="login-content" padding>
+
+<br/>
+<br/>
+
+  <div class="img-box">
+      <img src="../assets/images/st.png"/>
+
+  </div>
+<div class="login-box">
+  <ion-list inset>
+<p>Login</p>
+    <ion-item>
+<!--       <ion-label floating>Username</ion-label>
+ -->      <ion-input type="text" [(ngModel)]="email" placeholder ="Email"></ion-input>
+    </ion-item>
+
+<br/>
+ 
+    <ion-item>
+<!--       <ion-label floating>Password</ion-label>
+ -->      <ion-input type="text" [(ngModel)]="password" placeholder ="Password"></ion-input>
+    </ion-item>
+     
+<!--     <ion-item>
+ -->     <!--  <ion-input type="file" [(ngModel)]="private" multiple></ion-input> -->
+<!--       <div class="Block">
+ -->   
+<!--       <label id="lbl">Code </label>
+ -->  
+<!--        <input type='file' (change)="fileChanged($event)"></div>
+ -->  
+<!--    </ion-item>
+ -->  
+  </ion-list>
+
+  <div padding>
+    <button ion-button class="submit-btn" full (click)="myLogIn()" >Log In</button>
+  </div>
+  <br/>
+  </div>
+
+
+
+
+
+  
+</ion-content>
