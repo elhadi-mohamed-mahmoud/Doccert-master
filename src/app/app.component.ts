@@ -10,6 +10,7 @@ import { CertifsNonSignedPage } from '../pages/certifs-non-signed/certifs-non-si
 import { AllCertifPage } from '../pages/all-certif/all-certif';
 import { Deeplinks } from '@ionic-native/deeplinks/ngx';
 import { LoginRecipientPage } from '../pages/login-recipient/login-recipient';
+import { RegisterRecipientPage } from '../pages/register-recipient/register-recipient';
 
 
 
@@ -17,7 +18,7 @@ import { LoginRecipientPage } from '../pages/login-recipient/login-recipient';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = LoginRecipientPage;
+  rootPage:any = RegisterRecipientPage;
   @ViewChild(Nav) navChild:Nav;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private deeplinks: Deeplinks) {

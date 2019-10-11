@@ -1,0 +1,82 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="danger">
+ 
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+
+      <ion-item>
+        <ion-label floating>National Id</ion-label>
+        <ion-input type="numero" maxLength="9" [(ngModel)]="NatId"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>First Name</ion-label>
+          <ion-input type="text" [(ngModel)]="username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Last Name</ion-label>
+        <ion-input type="text" [(ngModel)]="lname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>re-enter yourPassword</ion-label>
+          <ion-input type="password" [(ngModel)]="password2"></ion-input>
+      </ion-item>
+      <ion-label>Date of birth:</ion-label>
+      <ion-item>
+          <ion-input type="Date" [(ngModel)]="birthday"></ion-input>
+      </ion-item>
+      <ion-row radio-group [(ngModel)]="sexe">
+        <ion-col>
+          <ion-item>
+            Sexe
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label>Mr</ion-label>
+            <ion-radio  value="man"></ion-radio>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+           <ion-label>Ms</ion-label>
+            <ion-radio  value="woman" ></ion-radio>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-item>
+        <ion-label floating>Adress</ion-label>
+        <ion-input  rows="3" maxLength="500" [(ngModel)]="adress"></ion-input>
+      </ion-item> 
+      <ion-item>
+        <ion-label floating > Phone number(06 00 00 00 00) </ion-label>
+        <ion-input type="numero" maxLength="10" [(ngModel)]="telephone"> </ion-input>
+      </ion-item> 
+      <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input type="email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+    </ion-list>
+   
+      <div padding>
+        <button   ion-button color="danger"  (click)="myRegister()"   >Register</button>
+      </div>
+    
+</ion-content>

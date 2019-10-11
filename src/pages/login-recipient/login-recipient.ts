@@ -42,7 +42,7 @@ file: any;
   }
 
   regi(){
-   // this.navCtrl.push(RegisterPage);
+    // this.navCtrl.push(RegisterPage);
 
 
   }
