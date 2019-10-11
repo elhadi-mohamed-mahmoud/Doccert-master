@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Home
+    </ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name='menu'></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+ 
+  <ion-content  style="font-family: Bookman, URW Bookman L, serif;" >
+       <h1 align="center" > Vos Certificats</h1>
+
+
+
+
+      <ion-card *ngFor="let c of cert" ><!--(click)="show(c)"-->
+        <ion-card-header>
+          <span >{{c.id}} </span>
+          <span style="float: right;" > <ion-icon ios="ios-share-alt" md="md-share-alt" (click)="share()"  ></ion-icon></span>
+        </ion-card-header>
+        <ion-card-content>
+          <h5>Institution : <b>{{c.name_organisme}}</b></h5>
+          <h5> Major: <b>{{c.major }}</b></h5>
+          <h5> Degree: <b>{{c.Degree}}</b></h5>
+          <h5> Graduation date: <b>{{c.dateofgraduation}}</b></h5>
+
+          <!--
+          <button expand="full" (click)="shareTwitter()">Share on Twitter</button>
+          <button expand="full" (click)="shareEmail()">Share by Email</button>
+          <button expand="full" (click)="shareFacebook()">Share on Facebook</button>
+          <button expand="full" (click)="shareWhatsApp()">Share with WhatsApp</button>
+          -->
+        </ion-card-content>
+      </ion-card>
+  
+  </ion-content>
+    
