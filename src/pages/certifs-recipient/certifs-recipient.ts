@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, LoadingController, AlertController, NavParams } from 'ionic-angular';
 import { AuthRecipientProvider } from '../../providers/auth-recipient/auth-recipient';
 //import { SocialSharing } from '@ionic-native/social-sharing/ngx';
-import { File } from '@ionic-native/file/ngx';
+import { File } from '@ionic-native/File/ngx';
 
 /**
  * Generated class for the CertifsRecipientPage page.
@@ -39,7 +39,7 @@ loading: any;
 
 	      this.cert=this.navParam.get('result');
 	      console.log(this.cert);
-	      console.log(this.cert.length);    
+	      // console.log(this.cert.length);    
   	}
 
   ionViewDidLoad() {

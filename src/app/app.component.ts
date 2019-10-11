@@ -19,7 +19,7 @@ import { CertifsRecipientPage } from '../pages/certifs-recipient/certifs-recipie
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = RegisterRecipientPage;
+  rootPage:any = CertifsRecipientPage;
   @ViewChild(Nav) navChild:Nav;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private deeplinks: Deeplinks) {
