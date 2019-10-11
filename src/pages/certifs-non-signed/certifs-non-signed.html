@@ -1,37 +1,36 @@
+<!--
+  Generated template for the CertifsNonSignedPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>certifs_non_signed</ion-title>
+  </ion-navbar>
+</ion-header> -->
 
 
-
-
-
-
-
-    <!-- <ion-header translucent>
-      <ion-toolbar>
-        <ion-title>Sertificates</ion-title>
-      </ion-toolbar>
-    </ion-header> -->
-    <ion-content class="ion-content" >
-      <ion-refresher slot="fixed" 
+<ion-content padding class="ion-content" >
+   <!-- Custom Refresher Content -->
+  <ion-refresher slot="fixed" 
   (ionRefresh)="ionRefresh($event)">
-          <ion-refresher-content>
-          </ion-refresher-content>
-      </ion-refresher>
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
+
       <ng-container *ngFor="let data of data">
-      <ion-card class="liste_eleve" *ngIf="data['etat'] ==1">
+      <ion-card class="liste_eleve" *ngIf="isZero(data['etat'])">
 	        <ion-card-header class="card-header" style="color:#95d4e4" >
-	         		
   						<ion-icon name="contact"></ion-icon> {{data['Lname']}}
-  				 
 	        </ion-card-header>
 
 	        <ion-card-content>
 	          
 	          		<ion-item class="ion-item">Student ID :{{data['NatID']}}</ion-item>
 	          		<ion-item class="ion-item">Certificate ID:		{{data['id_certificate']}}</ion-item>
-	          		<!-- <ion-item>Date of graduation:{{	sertifCredentials.dateGrad}}</ion-item>	
-	          		<ion-item>Degree ID:		{{sertifCredentials.DegreeID }}</ion-item>
+	          		<!-- <ion-item>Degree ID:		{{sertifCredentials.DegreeID }}</ion-item>
 	          		<ion-item>Major ID:		{{sertifCredentials.MajorID }}</ion-item> -->
-
 
 	<button ion-button (click)="show(data['id_certificate'])" block outline style="color:#197ba5">
       Show
@@ -40,6 +39,7 @@
      
       </ion-card>
       </ng-container>
-    </ion-content>
+      <ion-item *ngIf="estVide()">No data to show</ion-item>
 
+    </ion-content>
 

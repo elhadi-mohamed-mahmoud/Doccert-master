@@ -1,3 +1,53 @@
 page-home {
+.contact{
+   background:url('../../assets/images/ss.jpg');
+   background-size: cover;
+   font-family: Bookman, URW Bookman L, serif;
+	background-size: cover;
+ }
 
+.btn{
+border: 2px solid rgb(233, 240, 233);
+  width: 300px; 
+  height:60px;
+  background:rgba(241, 235, 235, 0); 
+  font-size: 20px;
+
+}
+
+.div-btn{ 
+  padding-bottom: 130px;
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: 30px;
+    padding-bottom: 10px;
+    font-weight: 400;
+     color: white;
+}
+
+
+h1,h2,h3,p{
+	color: white;
+}
+ .flb{
+   background-color: #4f9da6;
+   font-family: Bookman, URW Bookman L, serif;
+ }
+
+.head{
+    margin-bottom: 62px;
+}
+
+p{
+	padding-bottom: 19px;
+    font-size: 23px;
+    font-family: fantasy;
+        // color: white;
+
+}
+.hw{
+	    background-color: #ffffff;
+}
 }

@@ -1,0 +1,35 @@
+
+<ion-content padding>
+    
+<div align="center"style="border: think solid black;" >
+  <ion-list >
+    <br><br>
+    <img src='../../assets/images/logor.png' alt="">
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="text" [(ngModel)]="email"></ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <!--  <ion-input type="file" [(ngModel)]="private" multiple></ion-input> -->
+      <div class="Block">
+        <label id="lbl">Code </label>
+        <input type='file' (change)="fileChanged($event)">
+      </div>
+    </ion-item>
+  </ion-list>
+</div>
+<div padding align="center" >
+  <button  ion-button color="doccert"  (click)="myLogIn()" >Log In</button>
+</div> 
+<ion-row>
+  <div text-center>
+    If you don't have an account, please <a (click)="regi()">
+    register</a> first!
+  </div>
+</ion-row>
+    
+</ion-content>

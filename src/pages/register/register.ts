@@ -5,10 +5,18 @@ import { IonicPage, NavController, NavParams ,AlertController,ToastController, L
 
 import { AuthProvider } from '../../providers/auth/auth';
 import { LoginPage } from '../login/login';
+import { PhotoLibrary } from '@ionic-native/photo-library/ngx';
 
 
-import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
+import { File, FileEntry } from '@ionic-native/File/ngx';
+import { HttpClient } from '@angular/common/http';
+import { WebView } from '@ionic-native/ionic-webview/ngx';
+import { Storage } from '@ionic/storage';
+import { FilePath } from '@ionic-native/file-path/ngx';
+
+import { finalize } from 'rxjs/operators';
 
 /**
  * Generated class for the RegisterPage page.
@@ -24,12 +32,11 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 })
 export class RegisterPage {
   currentImage: any;
-
- myphoto:any;
+infos: any;
   errorMsg:string;
   loading: any;
 createSuccess = false;
-  registerCredentials = { email: '', password: '', confirmation_password: '' };
+  registerCredentials = { email: '', password: '', confirmation_password: '', my_signature: '' };
        
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
@@ -37,12 +44,16 @@ createSuccess = false;
     public loadingCtrl: LoadingController, 
     public authService: AuthProvider ,
     public alertCtrl: AlertController,
-    private camera: Camera
+    private camera: Camera,
+    private photoLibrary: PhotoLibrary
   ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');
+
+    this.infos = this.navParams.get('infos');
+    console.log(this.infos);
   }
 
   showLoader(){
@@ -118,10 +129,7 @@ else {
 }
 
 
-
-
-getImage() {
-	
+  getImage() {
     const options: CameraOptions = {
       quality: 70,
       destinationType: this.camera.DestinationType.DATA_URL,
@@ -129,17 +137,19 @@ getImage() {
       saveToPhotoAlbum:false
     }
 
+console.log("Hi");
     this.camera.getPicture(options).then((imageData) => {
       // imageData is either a base64 encoded string or a file URI
       // If it's base64:
-      	console.log("Hello222o");
+      console.log(imageData);
 
-
-      this.myphoto = 'data:image/jpeg;base64,' + imageData;
+      this.registerCredentials.my_signature = imageData;
     }, (err) => {
       // Handle error
+      console.log("Erreur about charging the image");
     });
   }
+
 
 
 }

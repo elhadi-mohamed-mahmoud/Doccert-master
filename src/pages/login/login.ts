@@ -4,6 +4,9 @@ import { IonicPage, NavController, NavParams, AlertController,ToastController, L
 
 import { RegisterPage } from '../register/register';
 import { AuthProvider } from '../../providers/auth/auth';
+import { SertificatesPage } from '../sertificates/sertificates';
+import { CertifsNonSignedPage } from '../certifs-non-signed/certifs-non-signed';
+import { AllCertifPage } from '../all-certif/all-certif';
 
 /**
  * Generated class for the LoginPage page.
@@ -100,15 +103,14 @@ export class LoginPage {
 
           this.authService.login(credentials).then((result) => {
             console.log(result);
-            var obj = JSON.parse(result.toString());
+            // var obj = JSON.parse(result.toString());
             this.loading.dismiss();
-            if(result != null){
-               console.log(obj["email"]);
-            this.navCtrl.push(RegisterPage);
-          }
-          else{
-            this.toastFunction("Username or password is incorrect !");          
-          }
+            if(result==0){
+              this.toastFunction("User desn't exist");
+              }else if(result != null){
+                      this.authService.setData(result)                 
+                      this.navCtrl.setRoot(AllCertifPage,{result:result});
+                    }        
 
           }, (err) => {
             console.log(err);

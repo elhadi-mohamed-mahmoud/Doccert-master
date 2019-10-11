@@ -1,0 +1,41 @@
+<!--
+  Generated template for the DataModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+  <ion-navbar >
+  	<button ion-buttons>
+	  	<button (click)= "closeModal()">
+	  		<ion-icon name="close"></ion-icon>
+		</button>
+	</button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+<ion-list>
+	<ion-list-header>
+    <ion-label>Details</ion-label>
+    </ion-list-header>
+	<ion-item>
+	    <ion-label>Name : {{data['name']}}</ion-label>
+	  </ion-item>
+	  <ion-item>
+	    <ion-label>Last Name : {{data['Lname']}}</ion-label>
+	  </ion-item>
+	  <ion-item>
+	    <ion-label>dateOfGraduation : {{data['dateOfGraduation']}}</ion-label>
+	  </ion-item>
+	  <ion-item>
+	    <ion-label>Major : {{data['Major']}}</ion-label>
+	  </ion-item>
+	  <ion-item>
+	    <ion-label>Id Certificate : {{data['id_certificate']}}</ion-label>
+	  </ion-item>
+</ion-list>
+
+<button ion-button (click)="sign(data['id_certificate'],data['id_signer'])" *ngIf="data['etat'] ==0">Sign</button>
+
+</ion-content>
