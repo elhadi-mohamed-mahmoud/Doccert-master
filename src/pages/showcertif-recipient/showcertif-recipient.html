@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      A
+    </ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name='menu'></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+ 
+
+<ion-content  style="font-family: Bookman, URW Bookman L, serif;">
+    <br><br>
+    <ion-card *ngFor="let c of cert">
+        <ion-card-header>
+          <span item-left>{{c.id}} </span>
+        </ion-card-header>
+        <ion-card-content>
+          <h5> Full name : <b>{{c.name}}</b><b> {{c.lname}}</b></h5>
+          <h5> Email: <b>{{c.email }}</b></h5>
+          <h5> Degree: <b>{{c.Degree}}</b></h5>
+          <h5> Major: <b>{{c.major}}</b></h5>
+          <h5> Verification date: <b>{{c.dateofgraduation}}</b></h5>
+        </ion-card-content>
+      </ion-card>
+</ion-content>
+
+
+
+
+
+

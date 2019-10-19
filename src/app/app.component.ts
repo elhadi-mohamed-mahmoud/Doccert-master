@@ -12,6 +12,7 @@ import { Deeplinks } from '@ionic-native/deeplinks/ngx';
 import { LoginRecipientPage } from '../pages/login-recipient/login-recipient';
 import { RegisterRecipientPage } from '../pages/register-recipient/register-recipient';
 import { CertifsRecipientPage } from '../pages/certifs-recipient/certifs-recipient';
+import { ShowcertifRecipientPage } from '../pages/showcertif-recipient/showcertif-recipient';
 
 
 
@@ -19,7 +20,7 @@ import { CertifsRecipientPage } from '../pages/certifs-recipient/certifs-recipie
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = CertifsRecipientPage;
+  rootPage:any = HomePage;
   @ViewChild(Nav) navChild:Nav;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private deeplinks: Deeplinks) {

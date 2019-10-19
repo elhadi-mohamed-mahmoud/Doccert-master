@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AuthProvider } from '../providers/auth/auth';
 
+import { ShowcertifRecipientPage } from '../pages/showcertif-recipient/showcertif-recipient';
 import { CertifsRecipientPage } from '../pages/certifs-recipient/certifs-recipient';
 import { RegisterRecipientPage } from '../pages/register-recipient/register-recipient';
 import { LoginRecipientPage } from '../pages/login-recipient/login-recipient';
@@ -39,9 +40,10 @@ import { AuthRecipientProvider } from '../providers/auth-recipient/auth-recipien
     SertificatesPage,
     CertifsNonSignedPage,
     AllCertifPage,
-    LoginRecipientPage,
+    //LoginRecipientPage,
     RegisterRecipientPage,
-    CertifsRecipientPage
+    CertifsRecipientPage,
+    ShowcertifRecipientPage
     // DataModalPage
     
   ],
@@ -60,9 +62,10 @@ import { AuthRecipientProvider } from '../providers/auth-recipient/auth-recipien
     SertificatesPage,
     CertifsNonSignedPage,
     AllCertifPage,
-    LoginRecipientPage,
+    //LoginRecipientPage,
     RegisterRecipientPage,
-    CertifsRecipientPage
+    CertifsRecipientPage,
+    ShowcertifRecipientPage
     // DataModalPage
 
   ],

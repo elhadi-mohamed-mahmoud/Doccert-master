@@ -39,7 +39,7 @@ login(credentials){
        headers.append('Accept','application/json');
        headers.append('content-type','application/json');
  
-        this.http.post(apiKey+'api/', JSON.stringify(credentials))
+        this.http.post(apiKey+'api/loginRecipient/', JSON.stringify(credentials))
           .subscribe(res => {
             let data = res.json();
             console.log(data)
